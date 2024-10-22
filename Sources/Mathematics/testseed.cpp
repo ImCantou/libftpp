@@ -24,10 +24,6 @@ int main(int ac, char **av) {
 			// Typical Perlin noise
 			double n = pn.sample(10 * x, 10 * y);
 
-			// Wood like structure
-			n = 20 * pn.sample(x, y);
-			n = n - floor(n);
-
 			// Map the values to the [0, 255] interval, for simplicity we use 
 			// tones of grey
 			image.r[kk] = floor(255 * n);
